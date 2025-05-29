@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher Directory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>School Teacher Directory</h1>
+    <input type="text" id="searchBox" placeholder="Search teacher by name..." oninput="handleSearch()">
+    <ul id="suggestions"></ul>
+
+    <div id="teacherInfo" class="hidden">
+      <h2 id="teacherName"></h2>
+      <p id="teacherSubject"></p>
+      <h3>Schedule</h3>
+      <ul id="scheduleList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
