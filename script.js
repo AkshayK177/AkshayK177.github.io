@@ -52,3 +52,5 @@ function displayTeacherInfo(teacher) {
     `}
   `;
 }
+console.log('Teachers array:', teachers);
+
