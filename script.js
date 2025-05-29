@@ -32,18 +32,21 @@ searchInput.addEventListener('input', function () {
 });
 
 function displayTeacherInfo(teacher) {
+  // Sort schedule by period number (ascending)
+  const sortedSchedule = teacher.schedule.sort((a, b) => a.period - b.period);
+
   teacherInfo.innerHTML = `
     <h2>${teacher.name}</h2>
     <p><strong>Email:</strong> <a href="mailto:${teacher.email}">${teacher.email}</a></p>
     <h3>Class Schedule:</h3>
-    ${teacher.schedule.length === 0 ? '<p>No classes assigned.</p>' : `
+    ${sortedSchedule.length === 0 ? '<p>No classes assigned.</p>' : `
       <table class="schedule-table">
         <tr>
           <th>Period</th>
           <th>Course Name</th>
           <th>Room</th>
         </tr>
-        ${teacher.schedule.map(classItem => `
+        ${sortedSchedule.map(classItem => `
           <tr>
             <td>${classItem.period}</td>
             <td>${classItem.courseName}</td>
