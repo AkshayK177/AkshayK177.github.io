@@ -1,3 +1,5 @@
+console.log('Teachers array:', teachers);
+
 const searchInput = document.getElementById('teacherSearch');
 const suggestionsList = document.getElementById('suggestions');
 const teacherInfo = document.getElementById('teacherInfo');
@@ -52,5 +54,3 @@ function displayTeacherInfo(teacher) {
     `}
   `;
 }
-console.log('Teachers array:', teachers);
-
