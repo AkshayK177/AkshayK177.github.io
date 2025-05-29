@@ -2,37 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teacher Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Schedule Lookup</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
-    <h1 class="title">Teacher Directory</h1>
-    
-    <div class="search-wrapper">
-      <input
-        type="text"
-        id="searchBox"
-        placeholder="Search for a teacher..."
-        oninput="handleSearch()"
-        autocomplete="off"
-        aria-label="Search for a teacher"
-      />
-      <ul id="suggestions" class="suggestions-list"></ul>
-    </div>
+  <div class="container">
+    <h1>Find a Teacher's Schedule</h1>
+    <input type="text" id="teacherSearch" placeholder="Start typing a teacher's name..." autocomplete="off" />
+    <ul id="suggestions"></ul>
+    <div id="teacherInfo"></div>
+  </div>
 
-    <section id="teacherInfo" class="teacher-info hidden" aria-live="polite" aria-atomic="true">
-      <h2 id="teacherName" class="teacher-name"></h2>
-      <p id="teacherSubject" class="teacher-department"></p>
-      <p id="teacherEmail" class="teacher-email"></p>
-
-      <h3 class="schedule-title">Schedule</h3>
-      <ul id="scheduleList" class="schedule-list"></ul>
-    </section>
-  </main>
-
-  <script src="teachers.js"></script>
+  <script src="teacher.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
